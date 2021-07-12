@@ -1,0 +1,75 @@
+body
+{
+    font-family: Arial, serif;
+    background-color: palegreen;
+}
+#header {
+    background-color: coral;
+}
+.cards {
+    background-color: palegoldenrod;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+
+
+
+}
+
+.card {
+    height: 150px;
+    width: 150px;
+    border: 1px solid red;
+    background-color: coral;
+    text-align: center;
+    border-radius: 3px;
+    position: relative;
+    transition: all 1s linear;
+    /*transform-style: preserve-3d;*/
+
+
+
+}
+/*.filler {*/
+/*    height: 150px;*/
+/*    width: 150px;*/
+/*    border: 1px solid red;*/
+/*    background-color: coral;*/
+/*    text-align: center;*/
+/*    border-radius: 3px;*/
+/*    position: relative;*/
+/*    transition: all 1s linear;*/
+/*}*/
+
+.back {
+    background-color: coral;
+    z-index: 1;
+    position: absolute;
+    /*transform: rotateY(180deg);*/
+    /*transform: translate(0, -151.99px);*/
+}
+
+.front {
+    position: absolute;
+    z-index: 2;
+    backface-visibility: hidden;
+
+}
+
+
+
+.front:hover {
+    transform: rotateY(180deg);
+    visibility: hidden;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.card {
+    perspective: 1000px;
+}
